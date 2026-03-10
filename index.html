@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Hakan Savaş">
+    <title>Hakan Savaş | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --link-color: #0000ee;
+            /* Classic link blue */
+        }
+
+        body {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            font-family: 'Fira Code', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        h1,
+        h2 {
+            font-family: inherit;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            font-weight: 700;
+        }
+
+        h2 {
+            display: none; /* Hide standard h2 as requested by design reference */
+        }
+
+        .nav {
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 400;
+        }
+
+        .nav a.active-nav {
+            font-weight: 700;
+        }
+
+        .nav a:hover,
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            display: none;
+            margin-bottom: 40px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-section {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-title {
+            color: var(--link-color);
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        
+        .item-title:hover {
+            text-decoration: underline;
+        }
+
+        .item-content {
+            display: none;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+        }
+
+        .item-content.open {
+            display: block;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: "- ";
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                margin: 40px auto;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>hakan savas</h1>
+        <div class="nav">
+            <a href="#education">/education</a>
+            <a href="#experience">/experience</a>
+            <a href="#projects">/projects</a>
+            <a href="#skills">/skills</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="education" class="section">
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/galatasaray-university</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Bachelor of Engineering in Computer Engineering (Sep 2021 - Jun 2026)</li>
+                        <li>Cumulative GPA: 3.53. ranked 7th amongst 82 students</li>
+                        <li>Istanbul, Turkey</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/universite-de-lille</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Erasmus Exchange Program - Computer Science (Sep 2024 - Jan 2025)</li>
+                        <li>Cumulative GPA: 3.80</li>
+                        <li>Lille, France</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/siemens</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Part-Time Software Engineer (May 2025 - Present)</li>
+                        <li>Developed back-end APIs using AWS Lambda (Node.js) and Java Spring for distributed service architectures.</li>
+                        <li>Contributed to migration from DynamoDB to RDS, integrated several services and improved optimization.</li>
+                        <li>Increased cloud test coverage by 73% by integrating on-prem CI/CD pipelines into cloud pipelines.</li>
+                        <li>Developed Terraform modules to automate management of AWS S3 buckets, reducing deployment time.</li>
+                        <li>Developed responsive front-end components using Angular to improve overall UX.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/tubitak-bilgem-ai-intern-2</span>
+                <div class="item-content">
+                    <ul>
+                        <li>AI Intern (Mar 2025 - Apr 2025)</li>
+                        <li>Researched deep learning methods for deriving insights from satellite imagery.</li>
+                        <li>Integrated existing remote sensing models into the project pipeline, achieving 82% segmentation accuracy.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/tubitak-bilgem-ai-intern-1</span>
+                <div class="item-content">
+                    <ul>
+                        <li>AI Intern (Jun 2024 - Jul 2024)</li>
+                        <li>Fine-tuned an LLM using PyTorch for an EU-funded AI-Automation project, improving subject performance.</li>
+                        <li>Designed evaluation metrics to guide and optimise LLM training cycles.</li>
+                        <li>Developed a web-based GUI using Streamlit, integrated APIs for improved user experience.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/inroll</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Django, React, PostgreSQL</li>
+                        <li>Designed and developed a job-application platform with a team of four.</li>
+                        <li>Built a secure authentication system with role-based access for recruiters and candidates.</li>
+                        <li>Implemented API endpoints for managing job postings, test submissions, and candidate data.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/agriguide</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Python, PyTorch, Streamlit, Flask (TÜBİTAK 2209-A)</li>
+                        <li>Developed a crop recommendation system for smart agriculture.</li>
+                        <li>Trained an AI model with PyTorch, optimizing predictions based on soil data.</li>
+                        <li>Built a web application using Streamlit, allowing seamless user interaction.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/core-skills</span>
+                <div class="item-content">
+                    <ul>
+                        <li>REST APIs, System Design, Pipeline Orchestration, Automated Tests</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/languages-and-frameworks</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Python, JavaScript, Java, C</li>
+                        <li>Spring Boot, Node.js, Django, Angular, React, PyTorch, PostgreSQL, DynamoDB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/tools-and-cloud</span>
+                <div class="item-content">
+                    <ul>
+                        <li>AWS (S3, Lambda, CloudWatch, EKS), Terraform, Docker, Git, CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item">
+                <span class="item-title" onclick="toggleItem(this)">/other</span>
+                <div class="item-content">
+                    <ul>
+                        <li>Languages: Turkish (Native), English (IELTS 8), French (DELF B2)</li>
+                        <li>Interests: Writing, Playing guitar, Fishing, Biking, Short movie production, Chess, Tea tasting, Cardistry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <div class="item">
+                <a href="https://github.com/savashakan22" target="_blank" class="item-title">/github</a> |
+                <a href="https://linkedin.com/in/hakansavass" target="_blank" class="item-title">/linkedin</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Toggle inner content
+        function toggleItem(element) {
+            const content = element.nextElementSibling;
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+            } else {
+                content.classList.add('open');
+            }
+        }
+
+        // Handle main section routing
+        function showSection(id) {
+            document.querySelectorAll('main > .section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            const targetSection = document.getElementById(id);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // Update active nav link style
+            document.querySelectorAll('.nav a').forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === '#' + id) {
+                    link.classList.add('active-nav');
+                }
+            });
+        }
+
+        function handleNav() {
+            const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                showSection(hash);
+            } else {
+                showSection('education'); // Default to first section
+            }
+        }
+
+        window.addEventListener('hashchange', handleNav);
+        window.addEventListener('DOMContentLoaded', handleNav);
+    </script>
+</body>
+
+</html>
